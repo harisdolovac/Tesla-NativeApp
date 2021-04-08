@@ -3,33 +3,34 @@ import { View, Text, ImageBackground } from "react-native";
 import StyledButton from "../styledButton/Index";
 import styles from "./styles";
 
-const Index = () => {
+const Index = ({ name, tagLine, image, tagLineCTA }) => {
   return (
     <View style={styles.carContainer}>
-      <ImageBackground
-        source={require("../../assets/Home.jpg")}
-        style={styles.imageHome}
-      />
+      <ImageBackground source={image} style={styles.imageHome} />
 
       <View style={styles.titles}>
-        <Text style={styles.title}>Model S</Text>
-        <Text style={styles.subTitle}>Starting at 69,000$</Text>
+        <Text style={styles.title}>{name}</Text>
+        <Text style={styles.subTitle}>
+          {tagLine} <Text style={styles.subTitleCTA}> {tagLineCTA}</Text>
+        </Text>
       </View>
 
-      <StyledButton
-        type="primary"
-        content={"Coustom order"}
-        onPress={() => {
-          console.log("order was pressd");
-        }}
-      />
-      <StyledButton
-        type="secundery"
-        content={"Existing inventory"}
-        onPress={() => {
-          console.log("existing inventory was pressd");
-        }}
-      />
+      <View style={styles.buttonContainer}>
+        <StyledButton
+          type="primary"
+          content={"Coustom order"}
+          onPress={() => {
+            console.log("order was pressd");
+          }}
+        />
+        <StyledButton
+          type="secundery"
+          content={"Existing inventory"}
+          onPress={() => {
+            console.log("existing inventory was pressd");
+          }}
+        />
+      </View>
     </View>
   );
 };

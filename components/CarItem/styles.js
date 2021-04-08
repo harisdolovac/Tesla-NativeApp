@@ -17,13 +17,23 @@ const styles = StyleSheet.create({
   },
   subTitle: {
     fontSize: 16,
-    color: "#5c5e62",
+    color: "lightgray",
   },
   imageHome: {
     width: "100%",
     height: "100%",
     resizeMode: "cover",
     position: "absolute",
+  },
+  buttonContainer: {
+    position: "absolute",
+    bottom: 50,
+    width: "100%",
+  },
+  subTitleCTA: {
+    color: "blue",
+    fontStyle: "italic",
+    textDecorationLine: "underline",
   },
 });
 
